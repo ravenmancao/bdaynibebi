@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6a0dad, #b266ff);
+  color: white;
+  overflow-x: hidden;
+}
+
+nav {
+  background: rgba(0,0,0,0.2);
+  padding: 15px;
+  text-align: center;
+}
+
+nav h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.links {
+  margin-top: 10px;
+}
+
+.links a {
+  margin: 0 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #ffd6ff;
+}
+
+.page {
+  display: none;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.page.active {
+  display: block;
+  animation: fade 0.8s ease-in-out;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.note {
+  white-space: pre-line;
+  text-align: left;
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Floating Hearts */
+.hearts::before,
+.hearts::after {
+  content: "💜 💕 💜 💕 💜";
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  animation: float 15s linear infinite;
+  opacity: 0.3;
+}
+
+.hearts::after {
+  top: 50%;
+  animation-duration: 20s;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-100vh); }
+}
